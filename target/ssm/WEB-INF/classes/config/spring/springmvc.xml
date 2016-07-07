@@ -9,7 +9,7 @@
     <context:component-scan base-package="rocks.chendidi.ssm.controller"/>
     <!--视图渲染-->
     <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/jsp/"/>
+        <property name="prefix" value="/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
 

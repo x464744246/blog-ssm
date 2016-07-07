@@ -39,7 +39,7 @@ public class UserServiceImplTest {
     public void testFindUser() throws Exception {
 //TODO: Test goes here...
 
-        System.out.println(userService.findUser());
+        System.out.println(userService.queryUsers());
 
 
     }

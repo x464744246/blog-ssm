@@ -15,5 +15,7 @@ public  interface UserService {
      * @return
      * @throws Exception
      */
-    List<User> findUser()throws Exception;
+    List<User> queryUsers()throws Exception;
+
+    User findUser(User user) throws Exception ;
 }

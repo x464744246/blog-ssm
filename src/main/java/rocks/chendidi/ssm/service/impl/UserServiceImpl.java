@@ -18,10 +18,21 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
 
-    public List<User> findUser() throws Exception {
+    public List<User> queryUsers() throws Exception {
         //调用mapper类中的selectByExample方法，如果传入类型为null，则表示无条件查找
         List<User> users = userMapper.selectByExample(null);
 
         return users;
+    }
+
+
+    public User findUser(User user) throws Exception {
+        //调用mapper类中的selectByExample方法，如果传入类型为null，则表示无条件查找
+        User u = userMapper.selectByPrimaryKey(user.getUserid());
+
+        if (user.getPassword().equals(u.getPassword()))
+            return u;
+        else
+            return null;
     }
 }
