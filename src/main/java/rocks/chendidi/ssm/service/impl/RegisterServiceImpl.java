@@ -3,6 +3,7 @@ package rocks.chendidi.ssm.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import rocks.chendidi.ssm.mapper.UserMapper;
+import rocks.chendidi.ssm.pojo.User;
 import rocks.chendidi.ssm.pojo.UserExample;
 import rocks.chendidi.ssm.service.RegisterService;
 
@@ -22,5 +23,10 @@ public class RegisterServiceImpl implements RegisterService {
         int count = userMapper.countByExample(example);
 
         return count;
+    }
+
+    public int addUser(User user) throws Exception {
+
+        return userMapper.insert(user);
     }
 }

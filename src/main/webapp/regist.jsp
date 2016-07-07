@@ -99,7 +99,7 @@
         }
         function checkpassword2(value) {
 
-            if (document.regist.pwd.value == document.regist.pwd2.value) {
+            if (document.regist.password.value == document.regist.password2.value) {
                 //格式正确
                 document.getElementById("error4").innerHTML = "";
             } else {
@@ -123,7 +123,15 @@
             }
         }
     </script>
+    <script>
+        function register()
+        //交由程序1处理
+        {
+            document.regist.action = "http://localhost:8080/register/check_register";
+            document.regist.submit();
+        }
 
+    </script>
 </head>
 
 <body>
@@ -136,27 +144,30 @@
 <div class="am-g">
     <div class="am-u-lg-6 am-u-md-8 am-u-sm-centered">
 
-        <form name="regist" action="Regist_CheckAction.action" method="post"
-              enctype="multipart/form-data" class="am-form"
+        <form name="regist" action="" method="post" class="am-form"
               onsubmit="return toVaild()">
-            </br> <input name="image" type="file" id="inputfile" size="30"
-                         accept="image/*"> </br> <label for="id">账号:</label> <input
-                type="text" name="user.id" id="id" value=""
+            </br>
+            <input name="image" type="file" id="inputfile" size="30"
+                         accept="image/*">
+            </br>
+            <label for="id">账号:</label>
+            <input
+                type="text" name="userid" id="userid" value=""
                 oninput="OnInput1 (event)" placeholder="数字、字母"><label
                 id="error" style="color: red"></label> <br> <label
                 id="error1" style="color: red"></label> <br> <label
-                for="password">昵称:</label> <input type="text" name="user.name"
-                                                  id="name" value="" oninput="OnInput2 (event)"
+                for="password">昵称:</label> <input type="text" name="username"
+                                                  id="username" value="" oninput="OnInput2 (event)"
                                                   placeholder="数字、字母、汉字">
             <p2>
                 <label id="error2" style="color: red"></label></p2>
             <br> <label for="password">密码:</label> <input type="password"
-                                                          name="pwd" id="password" value="" oninput="OnInput3 (event)"
+                                                          name="password" id="password" value="" oninput="OnInput3 (event)"
                                                           placeholder="输入密码">
             <p2>
                 <label id="error3" style="color: red"></label></p2>
             <br> <label for="password">重复密码:</label> <input type="password"
-                                                            name="pwd2" id="password2" value=""
+                                                            name="password2" id="password2" value=""
                                                             oninput="OnInput4 (event)"
                                                             placeholder="重复密码">
             <p2>
@@ -164,7 +175,7 @@
             <br/>
             <div class="am-cf ">
                 <input type="submit" name="" value="注 册"
-                       class="am-btn am-btn-primary am-btn-sm am-fl am-u-sm-centered">
+                       class="am-btn am-btn-primary am-btn-sm am-fl am-u-sm-centered"  onClick="register()">
             </div>
         </form>
         <hr>

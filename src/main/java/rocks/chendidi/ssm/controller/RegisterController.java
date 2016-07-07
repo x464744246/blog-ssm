@@ -11,6 +11,7 @@ import rocks.chendidi.ssm.pojo.User;
 import rocks.chendidi.ssm.pojo.UserExample;
 import rocks.chendidi.ssm.service.RegisterService;
 import rocks.chendidi.ssm.service.UserService;
+import rocks.chendidi.ssm.util.MD5Util;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -35,13 +36,13 @@ public class RegisterController {
     int num = 0;
 
     @RequestMapping(value = "/register", produces = "text/plain;charset=UTF-8")
-    public String register(){
+    public String register() {
         return "regist";
     }
 
-    @RequestMapping(value="/check_id",method = RequestMethod.POST)
-    public String checkUserName(HttpServletRequest request, HttpServletResponse response,User u) throws Exception {
-        String userid=u.getUserid();
+    @RequestMapping(value = "/check_id", method = RequestMethod.POST)
+    public String checkUserName(HttpServletRequest request, HttpServletResponse response, User u) throws Exception {
+        String userid = u.getUserid();
 
         System.out.println(userid);
         //检验用户名是否存在
@@ -49,16 +50,16 @@ public class RegisterController {
         UserExample.Criteria conditionCri = userExample.createCriteria();
         conditionCri.andUserNameEqualTo(userName);
         int num=registerService.countByExample(userExample);*/
-         num = registerService.checkUserId(userid);
+        num = registerService.checkUserId(userid);
 
 
         //用户名是否存在的标志
-        boolean flag=false;
-        if(num>0){
-            flag=true;
+        boolean flag = false;
+        if (num > 0) {
+            flag = true;
         }
         //将数据转换成json
-        Map<String,Object> map = new HashMap<String,Object>();
+        Map<String, Object> map = new HashMap<String, Object>();
         map.put("flag", flag);
         String json = JSONObject.valueToString(map).toString();
         //将数据返回
@@ -68,5 +69,38 @@ public class RegisterController {
         response.getWriter().flush();
         response.getWriter().close();
         return null;
+    }
+
+    @RequestMapping(value = "/check_register", method = RequestMethod.POST)
+    public String registerCheck(User u) throws Exception {
+        System.out.println(u.getUserid());
+        System.out.println(u.getPassword());
+        System.out.println(u.getUsername());
+        if (u.equals(null)) {
+            return "regist_fail";
+        } else {
+            u.setLevel("user");
+            u.setPassword(MD5Util.string2MD5(u.getPassword()));
+
+            if (registerService.addUser(u) > 0)
+                return "regist_success";
+            else
+                return "regist_fail";
+           /* InputStream is = new FileInputStream(image);
+            if (is != null) {
+                OutputStream os = new java.io.FileOutputStream(
+                        "D:/study/ReadyFoJavaee/Base1/WebContent/image/" + user.getId() + ".jpg");
+                byte buffer[] = new byte[8192];
+                int count = 0;
+                while ((count = is.read(buffer)) > 0) {
+                    os.write(buffer, 0, count);
+                }
+                os.close();
+                is.close();
+            }*/
+
+        }
+
+
     }
 }

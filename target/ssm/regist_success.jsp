@@ -12,8 +12,8 @@ pageEncoding="utf-8"%>
 	<meta name="format-detection" content="telephone=no">
 	<meta name="renderer" content="webkit">
 	<meta http-equiv="Cache-Control" content="no-siteapp" />
-	<link rel="alternate icon" type="image/png" href="assets/i/favicon.png">
-	<link rel="stylesheet" href="assets/css/amazeui.min.css" />
+	<link rel="alternate icon" type="image/png" href="../../../file/assets/i/favicon.png">
+	<link rel="stylesheet" href="../../../file/assets/css/amazeui.min.css" />
 	<style>
 		.header {
 			text-align: center;
