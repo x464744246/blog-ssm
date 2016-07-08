@@ -107,28 +107,28 @@
                 document.getElementById("error4").innerHTML = "密码不一致";
             }
         }
-        function toVaild() {
-            var error = document.getElementById("error").value;
-            var error1 = document.getElementById("error1").value;
-            var error2 = document.getElementById("error2").value;
-            var error3 = document.getElementById("error3").value;
-            var error4 = document.getElementById("error4").value;
-            if (error == null && error1 == null && error2 == null && error3 == null
-                    && error4 == null) {
-                alert("校验成功，之后进行提交");
-                return true;
-            } else {
-                alert("填写格式错误");
-                return false;
-            }
-        }
+
     </script>
     <script>
         function register()
         //交由程序1处理
         {
-            document.regist.action = "http://localhost:8080/register/check_register";
-            document.regist.submit();
+            alert($("#error").text());
+            var error = $("#error").text();
+            var error1 = $("#error1").text();
+            var error2 = $("#error2").text();
+            var error3 = $("#error3").text();
+            var error4 = $("#error4").text();
+            if (error == null && error1 == null && error2 == null && error3 == null
+                    && error4 == null) {
+                alert("校验成功，之后进行提交");
+                document.regist.action = "http://localhost:8080/register/check_register";
+                document.regist.submit();
+            } else {
+                alert("填写格式错误");
+                return false;
+            }
+
         }
 
     </script>
@@ -144,8 +144,8 @@
 <div class="am-g">
     <div class="am-u-lg-6 am-u-md-8 am-u-sm-centered">
 
-        <form name="regist" action="" method="post" class="am-form"
-              onsubmit="return toVaild()">
+        <form name="regist" action="" method="post" class="am-form" onsubmit="register()"
+              >
             </br>
             <input name="image" type="file" id="inputfile" size="30"
                          accept="image/*">
@@ -175,7 +175,7 @@
             <br/>
             <div class="am-cf ">
                 <input type="submit" name="" value="注 册"
-                       class="am-btn am-btn-primary am-btn-sm am-fl am-u-sm-centered"  onClick="register()">
+                       class="am-btn am-btn-primary am-btn-sm am-fl am-u-sm-centered"  >
             </div>
         </form>
         <hr>

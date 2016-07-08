@@ -8,14 +8,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import rocks.chendidi.ssm.pojo.User;
-import rocks.chendidi.ssm.pojo.UserExample;
 import rocks.chendidi.ssm.service.RegisterService;
-import rocks.chendidi.ssm.service.UserService;
 import rocks.chendidi.ssm.util.MD5Util;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 

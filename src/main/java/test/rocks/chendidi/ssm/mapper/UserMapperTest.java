@@ -3,13 +3,17 @@ package test.rocks.chendidi.ssm.mapper;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import rocks.chendidi.ssm.mapper.UserMapper;
-import rocks.chendidi.ssm.service.RegisterService;
 
 /**
  * Created by lenov0 on 2016/7/7.
  */
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration({"classpath*:/config/spring/applicationContext-*.xml", "classpath*:/config/spring/springmvc.xml"})
 public class UserMapperTest {
     @Autowired
     private UserMapper userMapper;

@@ -8,5 +8,6 @@ import rocks.chendidi.ssm.pojo.User;
 public interface RegisterService {
 
     int checkUserId(String userid) throws Exception ;
+
     int addUser(User user) throws Exception;
 }

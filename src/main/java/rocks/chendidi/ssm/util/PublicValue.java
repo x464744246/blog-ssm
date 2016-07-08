@@ -6,5 +6,6 @@ package rocks.chendidi.ssm.util;
 public class PublicValue {
 
     public static final int PAGESIZE = 10;
+    public static final int PERPAGE = 5;
 
 }

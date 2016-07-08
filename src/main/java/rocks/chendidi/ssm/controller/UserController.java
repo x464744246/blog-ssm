@@ -1,23 +1,16 @@
 package rocks.chendidi.ssm.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import rocks.chendidi.ssm.pojo.User;
-import rocks.chendidi.ssm.pojo.UserExample;
 import rocks.chendidi.ssm.service.UserService;
 import rocks.chendidi.ssm.util.MD5Util;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -45,7 +38,7 @@ public class UserController {
     /**
      * user
      * 查找所用用户控制器方法
-     *
+     * 测试用例
      * @return
      * @throws Exception
      */
@@ -63,43 +56,31 @@ public class UserController {
         return modelAndView;
     }
 
-
+    /*  跳转登录页面 */
     @RequestMapping(value = "/login", produces = "text/plain;charset=UTF-8")
     public String login() throws Exception {
-        modelAndView = new ModelAndView();
-        //设置响应的jsp视图
-
         return "login";
     }
 
+    /*  登陆验证  */
     @RequestMapping(value = "/login_check", produces = "text/plain;charset=UTF-8")
-    public String loginCheck(User u) throws Exception {
+    public String loginCheck(HttpSession httpSession, User u) throws Exception {
 
         u.setPassword(MD5Util.string2MD5(u.getPassword()));
-        System.out.println(u.getUserid());
-        System.out.println(u.getPassword());
         user = userService.findUser(u);
+
         if (user != null) {
-            System.out.println(user.getUserid());
-            System.out.println(user.getPassword());
-            System.out.println(user.getLevel());
+
             if (user.getLevel().equals("admin")) {
-
-                return "test";
-
+                httpSession.setAttribute("u", user);
+                return "redirect:/article/article";
             } else if (user.getLevel().equals("user")) {
-
                 return "user";
-
             } else {
-
                 return "WrongPassword";
-
             }
         } else {
-
             return "WrongPassword";
-
         }
 
     }
