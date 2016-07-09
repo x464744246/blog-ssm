@@ -6,6 +6,7 @@
 
 <head>
     <title>ChenDiDi's Rocks</title>
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
     <link rel="stylesheet"
           href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
     <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -39,46 +40,12 @@
 
     <script>
 
-        function page() {
-
-            $.ajax({ //一个Ajax过程
-                type: "post", //以post方式与后台沟通
-                url: "http://localhost:8080/article/page", //与此页面沟通
-                dataType: 'json',//返回的值以 JSON方式 解释
-                data: 'page=' + 1, //发给的数据
-                success: function (json) {//如果调用成功
-                    if (json.flag) {
-                        var tTr;
-                        var tTr2;
-                        $("#articlebody").html("");
-                        $("#page").html("");
-                        $.each(json.article, function (i, n) {
-
-                             tTr =tTr+ "<tr><td class='center'><span class='center'>"
-                                    + "<a href='localhost:8080/reply/reply?articleid=" + n.articleid + "'>" + n.title + "</a></span></td><td class='center'><span class='center'>" +
-                                    n.username + "</span></td><td class='center'><span class='center'>" + n.createdate + "</span></td></tr>";
-
-
-                        });
-                        tTr2 = " <li ><a id='-1' href='#' onclick='getpage(this)'>&laquo;</a></li>";
-                        $.each(json.page.perPage, function (j, p) {
-
-                            tTr2 =tTr2 +" <li ><a id="+ p+" href='#' onclick='getpage(this)'>"+p+"</a></li>";
-
-                        });
-                        tTr2 =tTr2 +" <li ><a id='0' href='#' onclick='getpage(this)'>&raquo;</a></li>";
-                        $("#articlebody").append(tTr);
-                        $("#page").append(tTr2);
-                    } else {
-                        alert("ERROR!!!!!!!!!!!!!!!!!!!!!!!!");
-                    }
-                }
-            });
-
-        }
         function getpage(obj) {
            // alert($(obj).attr("id"));
             var page = $(obj).attr("id");
+            alert(page);
+            if(page==null)
+                    page = 1;
             $.ajax({ //一个Ajax过程
                 type: "post", //以post方式与后台沟通
                 url: "http://localhost:8080/article/page", //与此页面沟通
@@ -93,7 +60,7 @@
                         $.each(json.article, function (i, n) {
 
                             tTr =tTr+ "<tr><td class='center'><span class='center'>"
-                                    + "<a href='localhost:8080/reply/reply?articleid=" + n.articleid + "'>" + n.title + "</a></span></td><td class='center'><span class='center'>" +
+                                    + "<a href='../../reply/reply?articleid=" + n.articleid + "'>" + n.title + "</a></span></td><td class='center'><span class='center'>" +
                                     n.username + "</span></td><td class='center'><span class='center'>" + n.createdate + "</span></td></tr>";
 
 
@@ -117,7 +84,7 @@
     </script>
 </head>
 
-<body onload="page()">
+<body onload="getpage(this)">
 
 <nav class="navbar navbar-default" role="navigation">
     <div class="navbar-header">
@@ -201,15 +168,7 @@
         </tr>
         </thead>
         <tbody id="articlebody">
-        <%--  <c:forEach items="${message}" var="message">
-              <tr>
-                  <td class="center"><span class="center"><a
-                          href="./Message_ReplyAction.action?messageid=${message.messageid}&page=1">${message.title}</a></span>
-                  </td>
-                  <td class="center"><span class="center">${message.id}</span></td>
-                  <td class="center"><span class="center">${message.createdate}</span></td>
-              </tr>
-          </c:forEach>--%>
+
         </tbody>
     </table>
     <nav style="text-align: center">

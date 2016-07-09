@@ -113,7 +113,7 @@
         function register()
         //交由程序1处理
         {
-            alert($("#error").text());
+            //alert($("#error").text());
             var error = $("#error").text();
             var error1 = $("#error1").text();
             var error2 = $("#error2").text();

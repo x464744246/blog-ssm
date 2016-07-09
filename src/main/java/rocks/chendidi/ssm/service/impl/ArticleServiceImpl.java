@@ -19,15 +19,33 @@ public class ArticleServiceImpl implements ArticleService {
     @Autowired
     private ArticleMapper articleMapper;
 
+    public Article getById(Article article) {
+
+        return articleMapper.selectByPrimaryKey(article.getArticleid());
+
+    }
+
     public List<Article> getByPage(int page, int size) {
-        int currentRow = (page-1)*size;
-        return articleMapper.selectByPage(currentRow,size);
+
+        if (page == 0)
+            page = (articleMapper.countByExample(null) / PublicValue.PAGESIZE) + 1;
+        if (page == -1)
+            page = 1;
+        int currentRow = (page - 1) * size;
+        return articleMapper.selectByPage(currentRow, size);
     }
 
     public Page getPage(int page) {
         Page p = new Page();
-        p.setCurrent(page);
-        p.setTotlePage((articleMapper.countByExample(null)/ PublicValue.PAGESIZE)+1);
+        if (page == 0) {
+            page = (articleMapper.countByExample(null) / PublicValue.PAGESIZE) + 1;
+            p.setCurrent(page);
+        } else if (page == -1) {
+            page = 1;
+            p.setCurrent(page);
+        } else
+            p.setCurrent(page);
+        p.setTotlePage((articleMapper.countByExample(null) / PublicValue.PAGESIZE) + 1);
         p.setPerPage();
         return p;
     }

@@ -14,10 +14,18 @@ public class Page {
     private List<Integer> perPage=new ArrayList<Integer>() ;
 
     public void setPerPage(){
-        if(current<=3)
+        if(current==0&&totlePage>5){
+            for(int i=0;i< PublicValue.PERPAGE;i++)
+                perPage.add(i,totlePage-(PublicValue.PERPAGE-i)+1);
+        }
+        else  if(current==0&&totlePage<=5){
             for(int i=0;i< PublicValue.PERPAGE;i++)
                 perPage.add(i,i+1);
-        else if(current>=(totlePage-2)){
+        }
+        else if(current<=3&&current!=0)
+            for(int i=0;i< PublicValue.PERPAGE;i++)
+                perPage.add(i,i+1);
+        else if(current>=(totlePage-2)&&current!=0){
             for(int i=0;i< PublicValue.PERPAGE;i++)
                 perPage.add(i,totlePage-(PublicValue.PERPAGE-i)+1);
         }

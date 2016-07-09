@@ -2,6 +2,7 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/src/main/java/test/rocks/chendidi/ssm/service/impl/ArticleServiceImplTest.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/test/rocks/chendidi/ssm/service/impl/ReplyServiceImplTest.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/test/rocks/chendidi/ssm/util/MD5UtilTest.java" charset="GBK" />
   </component>
 </project>

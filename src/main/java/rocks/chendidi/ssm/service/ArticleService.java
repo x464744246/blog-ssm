@@ -10,6 +10,10 @@ import java.util.List;
  */
 public interface ArticleService {
 
+    Article getById(Article article);
+
     List<Article> getByPage(int page , int size);
+
     Page getPage(int page);
+
 }
