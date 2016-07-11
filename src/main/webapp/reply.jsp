@@ -56,6 +56,7 @@
                     if (json.flag) {
                         var tTr = "</br>" ;
                         var tTr2;
+                        var cp = json.page.current;
                         $("#replybody").empty();
                         $("#page").html("");
                         $.each(json.reply, function (i, n) {
@@ -77,7 +78,10 @@
                         tTr2 = " <li ><a id='-1' href='#' onclick='getpage(this)'>&laquo;</a></li>";
                         $.each(json.page.perPage, function (j, p) {
 
-                            tTr2 = tTr2 + " <li ><a id=" + p + " href='#' onclick='getpage(this)'>" + p + "</a></li>";
+                            if(p==cp)
+                                tTr2 =tTr2 +" <li  class='active'><a id="+ p+" href='#' onclick='getpage(this)'>"+p+"</a></li>";
+                            else
+                                tTr2 =tTr2 +" <li ><a id="+ p+" href='#' onclick='getpage(this)'>"+p+"</a></li>";
 
                         });
                         tTr2 = tTr2 + " <li ><a id='0' href='#' onclick='getpage(this)'>&raquo;</a></li>";
