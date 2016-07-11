@@ -150,7 +150,7 @@
             <input name="image" type="file" id="inputfile" size="30"
                          accept="image/*">
             </br>
-            <label for="id">账号:</label>
+            <label>账号:</label>
             <input
                 type="text" name="userid" id="userid" value=""
                 oninput="OnInput1 (event)" placeholder="数字、字母"><label

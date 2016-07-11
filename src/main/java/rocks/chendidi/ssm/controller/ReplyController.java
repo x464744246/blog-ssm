@@ -100,4 +100,28 @@ public class ReplyController {
         response.getWriter().close();
         return null;
     }
+
+    @RequestMapping(value = "/delete", produces = "text/plain;charset=UTF-8")
+    public String delete(HttpSession httpSession, HttpServletResponse response,Reply reply) throws IOException {
+
+        int row = replyService.deleteReply(reply);
+
+        boolean flag = false;
+        if (row > 0) {
+            flag = true;
+        }
+
+
+        //将数据转换成json
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("flag", flag);
+        String json = JSONObject.valueToString(map).toString();
+        //将数据返回
+        response.setCharacterEncoding("UTF-8");
+        response.flushBuffer();
+        response.getWriter().write(json);
+        response.getWriter().flush();
+        response.getWriter().close();
+        return null;
+    }
 }

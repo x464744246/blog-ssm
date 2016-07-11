@@ -16,23 +16,17 @@
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 
 
-<link
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
-	rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="css/default.css">
-<link href="css/fileinput.css" media="all" rel="stylesheet"
+
+<link rel="stylesheet" type="text/css" href="../../../file/css/default.css">
+<link href="../../../file/css/fileinput.css" media="all" rel="stylesheet"
 	type="text/css" />
-<script src="http://libs.useso.com/js/jquery/2.1.1/jquery.min.js"></script>
-<script src="js/fileinput.js" type="text/javascript"></script>
-<script src="js/fileinput_locale_zh.js" type="text/javascript"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"
-	type="text/javascript"></script>
+<script src="../../../file/js/fileinput.js" type="text/javascript"></script>
+<script src="../../../file/js/fileinput_locale_zh.js" type="text/javascript"></script>
 
 
 
-<link rel="alternate icon" type="image/png" href="assets/i/favicon.png">
-<link rel="stylesheet" href="assets/css/amazeui.min.css" />
+<link rel="alternate icon" type="../../../file/image/png" href="assets/i/favicon.png">
+<link rel="stylesheet" href="../../../file/assets/css/amazeui.min.css" />
 <link rel="stylesheet"
 	href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
 <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -48,41 +42,30 @@
 }
 </style>
 <script type="text/javascript">
-	function toVaild() {
+	function add() {
 		var title =  $('#title').val();
-		title = encodeURI(title);
-		$("#title").val(title);
-	
 		var article =  $('#article').val();
+		title = encodeURI(title);
 		article = encodeURI(article);
-		$("#article").val(article);
-		//document.getElementByid("title").value = encodeURI(encodeURI(document.getElementByid("title").value));
-		//document.getElementByid("article").value = encodeURI(encodeURI(document.getElementByid("article").value));
-		//alert( $('#article').val());
-		return true;
 
+		$.ajax({ //一个Ajax过程
+			type: "post", //以post方式与后台沟通
+			url: "http://localhost:8080/article/add", //与此页面沟通
+			dataType: 'json',//返回的值以 JSON方式 解释
+			data:  {"title":title,"article":article}, //发给的数据
+			success: function (json) {//如果调用成功
+				if (json.flag) {
+					//alert("添加成功");
+					//self.location='http://localhost:8080/article/article';
+				}else{
+					alert("添加失败");
+				}
+			}
+		});
 	}
 </script>
 
-<!-- 
-<script>
-	$("#file-0").fileinput({
-		'allowedFileExtensions' : [ 'jpg', 'png', 'gif' ],
-	});
 
-	$(document).ready(function() {
-		$("#test-upload").fileinput({
-			'showPreview' : false,
-			'allowedFileExtensions' : [ 'jpg', 'png', 'gif' ],
-			'elErrorContainer' : '#errorBlock'
-		});
-		/*
-		$("#test-upload").on('fileloaded', function(event, file, previewId, index) {
-		    alert('i = ' + index + ', id = ' + previewId + ', file = ' + file.name);
-		});
-		 */
-	});
-</script> -->
 </head>
 
 <body>
@@ -118,7 +101,7 @@
 		<ul class="nav pull-right">
 
 			<li class="dropdown"><a data-toggle="dropdown"
-				class="dropdown-toggle " href="#">${sessionScope.u.name}<strong
+				class="dropdown-toggle " href="#">${sessionScope.u.username}<strong
 					class="caret"></strong></a>
 				<ul class="dropdown-menu pull-right">
 					<li><a href="./PasswordChange.action">更改密码</a></li>
@@ -136,14 +119,14 @@
 	<div class="row container-fluid">
 		<div class="col-md-10 col-md-offset-1">
 
-			<form action="./Message_AddCheckAction.action" role="form" onsubmit="return toVaild()">
+			<form id = "edit" name="edit" action="" role="form"  >
 				<div class="form-group">
-					<label for="name">标题</label> </br> <input id="title" type="text"
+					<label>标题</label> </br> <input id="title" type="text"
 						name="title" class="form-control" placeholder="文本输入">
 				</div>
 
 				<div class="form-group">
-					</br> <label for="name">内容</label> </br>
+					</br> <label >内容</label> </br>
 					<textarea id="article" name="article" class="form-control"
 						rows="18"></textarea>
 				</div>
@@ -155,7 +138,7 @@
 				</div> -->
 
 				<div class="am-cf ">
-					</br> <input id="send" type="submit" name="" value="发   表 "
+					</br> <input id="send" type="button" name="" value="发   表 " onclick="add()"
 						class="am-btn am-btn-primary am-btn-sm am-fl am-u-sm-centered">
 				</div>
 			</form>

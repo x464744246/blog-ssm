@@ -23,6 +23,41 @@
     </style>
 
     <script type="text/javascript">
+        function adel(id) {
+            alert(id);
+            $.ajax({ //一个Ajax过程
+                type: "post", //以post方式与后台沟通
+                url: "http://localhost:8080/article/delete", //与此页面沟通
+                dataType: 'json',//返回的值以 JSON方式 解释
+                data: 'articleid=' + id, //发给的数据
+                success: function (json) {//如果调用成功
+                    if (json.flag) {
+                        alert("删除文章成功");
+                        self.location='http://localhost:8080/article/article';
+
+                    }else{
+                        alert("删除文章失败");
+                    }
+                }
+            });
+        }
+        function rdel(id) {
+            alert(id);
+            $.ajax({ //一个Ajax过程
+                type: "post", //以post方式与后台沟通
+                url: "http://localhost:8080/reply/delete", //与此页面沟通
+                dataType: 'json',//返回的值以 JSON方式 解释
+                data: 'replyid=' + id, //发给的数据
+                success: function (json) {//如果调用成功
+                    if (json.flag) {
+                        alert("删除回复成功");
+                        getpage(null);
+                    }else{
+                        alert("删除回复失败");
+                    }
+                }
+            });
+        }
         function add() {
             var reply = $("#reply").val();
             $.ajax({ //一个Ajax过程
@@ -44,7 +79,7 @@
         function getpage(obj) {
             // alert($(obj).attr("id"));
             var page = $(obj).attr("id");
-            alert(page);
+           // alert(page);
             if (page == null)
                 page = 1;
             $.ajax({ //一个Ajax过程
@@ -54,12 +89,15 @@
                 data: 'page=' + page, //发给的数据
                 success: function (json) {//如果调用成功
                     if (json.flag) {
+                        var userid = ${sessionScope.u.userid};
+                        var userid2 = ${sessionScope.a.userid};
                         var tTr = "</br>" ;
                         var tTr2;
                         var cp = json.page.current;
                         $("#replybody").empty();
                         $("#page").html("");
                         $.each(json.reply, function (i, n) {
+
 
                             tTr = tTr + "</br>" +
                                     "<div class='row container-fluid'>" +
@@ -71,8 +109,7 @@
                             " <h4 class='list-group-item-heading'>回复：" + ${sessionScope.a.userid}+
                                     "</h4> <pre class='list-group-item-text'>" + n.reply+
                                     "</pre></a>" +
-                            " <button class='btn btn-small btn-link  pull-right' id='delete' type='button' onclick='location=./Reply_DeleteAction.action?replyid=" + n.replyid+
-                                    "'>删除回复</button> </div> </div> ";
+                            " <button class='btn btn-small btn-link  pull-right' id='delete' type='button' onclick='rdel(\"" + n.replyid+ "\")'>删除回复</button> </div> </div> ";
 
                         });
                         tTr2 = " <li ><a id='-1' href='#' onclick='getpage(this)'>&laquo;</a></li>";
@@ -87,17 +124,17 @@
                         tTr2 = tTr2 + " <li ><a id='0' href='#' onclick='getpage(this)'>&raquo;</a></li>";
                         $("#replybody").append(tTr);
                         $("#page").append(tTr2);
+                        if (userid == userid2)
+                            ;
+                        else
+                            $('[id=delete]').attr("disabled", true);
                     } else {
                         alert("ERROR!!!!!!!!!!!!!!!!!!!!!!!!");
                     }
                 }
             });
-            var userid = ${sessionScope.u.userid};
-            var userid2 = ${sessionScope.a.userid};
-            if (userid == userid2)
-                ;
-            else
-                $('[id=delete]').attr("disabled", true);
+
+
 
         }
 
@@ -178,7 +215,7 @@
                 </a>
                 <button class="btn btn-small btn-link  pull-right" id="delete"
                         type="button"
-                        onclick="location='./Message_DeleteAction.action?messageid='+'${sessionScope.a.articleid}'">删除主题
+                        onclick="adel('${sessionScope.a.articleid}')">删除主题
                 </button>
 
             </div>
@@ -206,7 +243,7 @@
     </nav>
     <form action="" method="post" role="form">
         <div class="form-group  container-fluid">
-            <label for="name">回复区</label>
+            <label>回复区</label>
             <textarea id = "reply" name="rm" class="form-control" rows="3"></textarea>
             <button type="button"
                     class="btn btn-default  pull-right  container-fluid"

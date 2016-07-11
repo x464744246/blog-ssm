@@ -56,4 +56,11 @@ public class ReplyServiceImpl implements ReplyService {
     public int addReply(Reply reply) {
         return replyMapper.insert(reply);
     }
+
+    public int deleteReply(Reply reply) {
+        ReplyExample replyExample = new ReplyExample();
+        ReplyExample.Criteria criteria = replyExample.createCriteria();
+        criteria.andReplyidEqualTo(reply.getReplyid());
+        return replyMapper.deleteByExample(replyExample);
+    }
 }

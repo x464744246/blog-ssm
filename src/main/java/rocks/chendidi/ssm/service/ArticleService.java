@@ -16,4 +16,8 @@ public interface ArticleService {
 
     Page getPage(int page);
 
+    int deleteArticle(Article article);
+
+    int addArticle(Article article);
+
 }

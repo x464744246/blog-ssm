@@ -15,4 +15,6 @@ public interface ReplyService {
     Page getPage(int page  , String articleid );
 
     int addReply(Reply reply);
+
+    int deleteReply(Reply reply);
 }

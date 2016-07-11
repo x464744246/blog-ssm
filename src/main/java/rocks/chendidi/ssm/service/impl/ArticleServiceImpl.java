@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import rocks.chendidi.ssm.mapper.ArticleMapper;
 import rocks.chendidi.ssm.model.Page;
 import rocks.chendidi.ssm.pojo.Article;
+import rocks.chendidi.ssm.pojo.ArticleExample;
 import rocks.chendidi.ssm.service.ArticleService;
 import rocks.chendidi.ssm.util.PublicValue;
 
@@ -48,5 +49,16 @@ public class ArticleServiceImpl implements ArticleService {
         p.setTotlePage((articleMapper.countByExample(null) / PublicValue.PAGESIZE) + 1);
         p.setPerPage();
         return p;
+    }
+
+    public int deleteArticle(Article article) {
+        ArticleExample articleExample = new ArticleExample();
+        ArticleExample.Criteria criteria = articleExample.createCriteria();
+        criteria.andArticleidEqualTo(article.getArticleid());
+        return articleMapper.deleteByExample(articleExample);
+    }
+
+    public int addArticle(Article article) {
+        return articleMapper.insert(article);
     }
 }

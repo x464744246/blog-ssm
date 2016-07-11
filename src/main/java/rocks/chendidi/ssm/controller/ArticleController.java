@@ -8,10 +8,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import rocks.chendidi.ssm.model.Page;
 import rocks.chendidi.ssm.pojo.Article;
+import rocks.chendidi.ssm.pojo.Reply;
+import rocks.chendidi.ssm.pojo.User;
 import rocks.chendidi.ssm.service.ArticleService;
 import rocks.chendidi.ssm.util.PublicValue;
 
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
@@ -58,6 +61,62 @@ public class ArticleController {
     public String page() {
         return "article";
     }
+    @RequestMapping(value = "/edit", produces = "text/plain;charset=UTF-8")
+    public String edit() {
+        return "edit";
+    }
 
+    @RequestMapping(value = "/delete", produces = "text/plain;charset=UTF-8")
+    public String delete(HttpSession httpSession, HttpServletResponse response, Article article) throws IOException {
+
+        int row = articleService.deleteArticle(article);
+
+        boolean flag = false;
+        if (row > 0) {
+            flag = true;
+        }
+
+
+        //将数据转换成json
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("flag", flag);
+        String json = JSONObject.valueToString(map).toString();
+        //将数据返回
+        response.setCharacterEncoding("UTF-8");
+        response.flushBuffer();
+        response.getWriter().write(json);
+        response.getWriter().flush();
+        response.getWriter().close();
+        return null;
+    }
+
+    @RequestMapping(value = "/add", produces = "text/plain;charset=UTF-8")
+    public String add(HttpSession httpSession, HttpServletResponse response,Article article) throws IOException {
+        article.setTitle(java.net.URLDecoder.decode(article.getTitle(), "utf-8"));
+        article.setArticle(java.net.URLDecoder.decode(article.getArticle(),"utf-8"));
+        System.out.println(article.getArticle()+"          " +article.getTitle());
+        User user = (User) httpSession.getAttribute("u");
+        article.setUserid(user.getUserid());
+        article.setUsername(user.getUsername());
+        int row = articleService.addArticle(article);
+
+        boolean flag = false;
+        if (row > 0) {
+            flag = true;
+        }
+
+
+        //将数据转换成json
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("flag", flag);
+        String json = JSONObject.valueToString(map).toString();
+        //将数据返回
+        response.setCharacterEncoding("UTF-8");
+        response.flushBuffer();
+        response.getWriter().write(json);
+        response.getWriter().flush();
+        response.getWriter().close();
+        return null;
+    }
 
 }

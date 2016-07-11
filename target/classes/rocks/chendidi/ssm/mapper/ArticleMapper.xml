@@ -102,6 +102,9 @@
     </if>
   </delete>
   <insert id="insert" parameterType="rocks.chendidi.ssm.pojo.Article" >
+    <selectKey keyProperty="articleid" resultType="String" order="BEFORE">
+      select  replace(uuid(),'-','')   from dual
+    </selectKey>
     insert into article (Articleid, Article, Title, 
       createdate, daletedate, userid, 
       username)

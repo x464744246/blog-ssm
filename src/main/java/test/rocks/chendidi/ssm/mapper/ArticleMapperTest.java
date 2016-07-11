@@ -34,11 +34,24 @@ public class ArticleMapperTest {
     @Test
     public void testSelectByPage() throws Exception {
 //TODO: Test goes here...
-        List<Article> list = articleMapper.selectByPage(2,1);
+      /*  List<Article> list = articleMapper.selectByPage(2,1);
 
         //List<Article> list = articleMapper.selectByExample(null);
         for(int i =0;i<list.size();i++){
             System.out.println(list.get(i).getArticleid());
-        }
+        }*/
+    }
+
+    @Test
+    public void testInsert() throws Exception {
+//TODO: Test goes here...
+        Article article = new Article();
+        article.setUsername("qqqq");
+        article.setUserid("qqqq");
+        article.setArticle("qqqq");
+        article.setTitle("qqqq");
+        articleMapper.insert(article);
+
+
     }
 }

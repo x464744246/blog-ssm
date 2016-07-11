@@ -43,7 +43,7 @@
         function getpage(obj) {
            // alert($(obj).attr("id"));
             var page = $(obj).attr("id");
-            alert(page);
+          //  alert(page);
             if(page==null)
                     page = 1;
             $.ajax({ //一个Ajax过程
@@ -102,7 +102,7 @@
     <div class="collapse navbar-collapse" id="example-navbar-collapse">
         <ul class="nav navbar-nav">
             <li class="active"><a href="./Message_PageAction.action?page=1">首页</a></li>
-            <li><a href="./Message_AddAction.action">添加文章</a></li>
+            <li><a href="http://localhost:8080/article/edit">添加文章</a></li>
             <li><a href="./MAndRAction.action?page=1">我的回复</a></li>
             <li class="dropdown"><a href="#" class="dropdown-toggle"
                                     data-toggle="dropdown"> 更多 <b class="caret"></b>
