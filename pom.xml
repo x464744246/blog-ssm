@@ -196,15 +196,25 @@
             <artifactId>json</artifactId>
             <version>20160212</version>
         </dependency>
+
         <dependency>
             <groupId>net.sf.ehcache</groupId>
             <artifactId>ehcache-core</artifactId>
             <version>2.4.3</version>
         </dependency>
+
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>4.2.0.Final</version>
         </dependency>
+
+        <!--qiniu begin-->
+        <dependency>
+            <groupId>com.qiniu</groupId>
+            <artifactId>sdk</artifactId>
+            <version>6.1.7</version>
+        </dependency>
+        <!--qiniu end-->
     </dependencies>
 </project>

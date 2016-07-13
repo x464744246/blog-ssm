@@ -55,8 +55,8 @@
 			data:  {"title":title,"article":article}, //发给的数据
 			success: function (json) {//如果调用成功
 				if (json.flag) {
-					//alert("添加成功");
-					//self.location='http://localhost:8080/article/article';
+					alert("添加成功");
+					self.location='http://localhost:8080/article/article';
 				}else{
 					alert("添加失败");
 				}

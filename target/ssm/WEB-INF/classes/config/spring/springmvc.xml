@@ -16,4 +16,13 @@
 
     <!--控制器映射器和控制器适配器-->
     <mvc:annotation-driven></mvc:annotation-driven>
+    <!-- 拦截器配置 -->
+    <mvc:interceptors>
+        <!--多个拦截器,顺序执行 -->
+        <!-- 登陆认证拦截器 -->
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="rocks.chendidi.ssm.interceptor.LoginInteceptor"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>

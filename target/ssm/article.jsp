@@ -127,7 +127,7 @@
                 <ul class="dropdown-menu pull-right">
                     <li><a href="./PasswordChange.action">更改密码</a></li>
                     <li class="divider"></li>
-                    <li><a href="./Login_OutAction.action">退出登录</a></li>
+                    <li><a href="http://localhost:8080/user/login_out">退出登录</a></li>
                 </ul>
             </li>
         </ul>

@@ -113,19 +113,57 @@
         function register()
         //交由程序1处理
         {
+
+
             //alert($("#error").text());
-            var error = $("#error").text();
-            var error1 = $("#error1").text();
-            var error2 = $("#error2").text();
-            var error3 = $("#error3").text();
-            var error4 = $("#error4").text();
-            if (error == null && error1 == null && error2 == null && error3 == null
-                    && error4 == null) {
+            var error = $("#error").val();
+            var error1 = $("#error1").val();
+            var error2 = $("#error2").val();
+            var error3 = $("#error3").val();
+            var error4 = $("#error4").val();
+            if (error == "" && error1 == "" && error2 == "" && error3 == ""
+                    && error4 == "") {
                 alert("校验成功，之后进行提交");
+                var Qiniu_UploadUrl = "http://up.qiniu.com";
+                var Qiniu_upload = function (f, token, key) {
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', Qiniu_UploadUrl, true);
+                    var formData, startDate;
+                    formData = new FormData();
+                    if (key !== null && key !== undefined) formData.append('key', key);
+                    formData.append('token', token);
+                    formData.append('file', f);
+                    var taking;
+
+                    xhr.onreadystatechange = function (response) {
+                        if (xhr.readyState == 4 && xhr.status == 200 && xhr.responseText != "") {
+                            var blkRet = JSON.parse(xhr.responseText);
+                            console && console.log(blkRet);
+                        } else if (xhr.status != 200 && xhr.responseText) {
+
+                            alert(xhr.responseText);
+                        }
+                    };
+                    startDate = new Date().getTime();
+                    xhr.send(formData);
+                };
+                var token;
+                $.ajaxSettings.async = false;
+                $.getJSON("http://localhost:8080/token/gettoken", function (data) {
+                    token = data.token;
+                    alert(token);
+                    if ($("#file")[0].files.length > 0) {
+                        Qiniu_upload($("#file")[0].files[0], token, $("#userid").val());
+                    } else {
+                        console && console.log("form input error");
+                    }
+                });
+
+
                 document.regist.action = "http://localhost:8080/register/check_register";
                 document.regist.submit();
             } else {
-                alert("填写格式错误");
+                alert("填写格式错误"+"1"+error+"1"+error1+"1"+error2+"1"+error3+"1"+error4+"1");
                 return false;
             }
 
@@ -145,15 +183,15 @@
     <div class="am-u-lg-6 am-u-md-8 am-u-sm-centered">
 
         <form name="regist" action="" method="post" class="am-form" onsubmit="register()"
-              >
+        >
             </br>
-            <input name="image" type="file" id="inputfile" size="30"
-                         accept="image/*">
+            <input name="file" type="file" id="file" size="30"
+                   accept="image/*">
             </br>
             <label>账号:</label>
             <input
-                type="text" name="userid" id="userid" value=""
-                oninput="OnInput1 (event)" placeholder="数字、字母"><label
+                    type="text" name="userid" id="userid" value=""
+                    oninput="OnInput1 (event)" placeholder="数字、字母"><label
                 id="error" style="color: red"></label> <br> <label
                 id="error1" style="color: red"></label> <br> <label
                 for="password">昵称:</label> <input type="text" name="username"
@@ -162,7 +200,8 @@
             <p2>
                 <label id="error2" style="color: red"></label></p2>
             <br> <label for="password">密码:</label> <input type="password"
-                                                          name="password" id="password" value="" oninput="OnInput3 (event)"
+                                                          name="password" id="password" value=""
+                                                          oninput="OnInput3 (event)"
                                                           placeholder="输入密码">
             <p2>
                 <label id="error3" style="color: red"></label></p2>
@@ -175,7 +214,7 @@
             <br/>
             <div class="am-cf ">
                 <input type="submit" name="" value="注 册"
-                       class="am-btn am-btn-primary am-btn-sm am-fl am-u-sm-centered"  >
+                       class="am-btn am-btn-primary am-btn-sm am-fl am-u-sm-centered">
             </div>
         </form>
         <hr>

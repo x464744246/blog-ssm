@@ -102,7 +102,7 @@
                             tTr = tTr + "</br>" +
                                     "<div class='row container-fluid'>" +
                                     "<div class='col-md-2 col-md-offset-1'>" +
-                                    "<img src='' class=' img-rounded img-responsive' alt='Cinque Terre'width='228' height='228'>" +
+                                    "<img src='http://o9xpxlz6j.bkt.clouddn.com/"+n.userid+"' class=' img-rounded img-responsive' alt='Cinque Terre'width='228' height='228'>" +
                             "<p class='list-group-item-text'>" + n.username+
                                     "</p></div><div class='col-md-8'> " +
                             "<a href='#' class='list-group-item'>" +
@@ -200,7 +200,7 @@
         <div class="row container-fluid">
 
             <div class="col-md-2 col-md-offset-1">
-                <img src="./image/${sessionScope.a.userid}.jpg"
+                <img src="http://o9xpxlz6j.bkt.clouddn.com/${sessionScope.a.userid}"
                      class=" img-rounded img-responsive" alt="Cinque Terre" width="228"
                      height="228">
                 <p class="list-group-item-text">${sessionScope.a.username}</p>

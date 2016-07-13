@@ -62,6 +62,12 @@ public class UserController {
         return "login";
     }
 
+    @RequestMapping(value = "/login_out", produces = "text/plain;charset=UTF-8")
+    public String loginout(HttpSession httpSession) throws Exception {
+        httpSession.setAttribute("u",null);
+        return "login";
+    }
+
     /*  登陆验证  */
     @RequestMapping(value = "/login_check", produces = "text/plain;charset=UTF-8")
     public String loginCheck(HttpSession httpSession, User u) throws Exception {
