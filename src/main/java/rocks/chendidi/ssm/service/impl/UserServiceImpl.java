@@ -30,7 +30,9 @@ public class UserServiceImpl implements UserService {
         //调用mapper类中的selectByExample方法，如果传入类型为null，则表示无条件查找
         User u = userMapper.selectByPrimaryKey(user.getUserid());
 
-        if (user.getPassword().equals(u.getPassword()))
+        if(u==null)
+            return null;
+        else if (user.getPassword().equals(u.getPassword()))
             return u;
         else
             return null;

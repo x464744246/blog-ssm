@@ -38,19 +38,21 @@
                         });
     </script>
 
+
+
     <script>
 
         function getpage(obj) {
-           // alert($(obj).attr("id"));
+            // alert($(obj).attr("id"));
             var page = $(obj).attr("id");
-          //  alert(page);
-            if(page==null)
-                    page = 1;
+            //  alert(page);
+            if (page == null)
+                page = 1;
             $.ajax({ //一个Ajax过程
                 type: "post", //以post方式与后台沟通
                 url: "http://localhost:8080/article/page", //与此页面沟通
                 dataType: 'json',//返回的值以 JSON方式 解释
-                data: 'page=' + page , //发给的数据
+                data: 'page=' + page, //发给的数据
                 success: function (json) {//如果调用成功
                     if (json.flag) {
                         var tTr;
@@ -60,7 +62,7 @@
                         $("#page").html("");
                         $.each(json.article, function (i, n) {
 
-                            tTr =tTr+ "<tr><td class='center'><span class='center'>"
+                            tTr = tTr + "<tr><td class='center'><span class='center'>"
                                     + "<a href='../../reply/reply?articleid=" + n.articleid + "'>" + n.title + "</a></span></td><td class='center'><span class='center'>" +
                                     n.username + "</span></td><td class='center'><span class='center'>" + n.createdate + "</span></td></tr>";
 
@@ -69,13 +71,13 @@
                         tTr2 = " <li ><a id='-1' href='#' onclick='getpage(this)'>&laquo;</a></li>";
                         $.each(json.page.perPage, function (j, p) {
 
-                            if(p==cp)
-                            tTr2 =tTr2 +" <li  class='active'><a id="+ p+" href='#' onclick='getpage(this)'>"+p+"</a></li>";
+                            if (p == cp)
+                                tTr2 = tTr2 + " <li  class='active'><a id=" + p + " href='#' onclick='getpage(this)'>" + p + "</a></li>";
                             else
-                                tTr2 =tTr2 +" <li ><a id="+ p+" href='#' onclick='getpage(this)'>"+p+"</a></li>";
+                                tTr2 = tTr2 + " <li ><a id=" + p + " href='#' onclick='getpage(this)'>" + p + "</a></li>";
 
                         });
-                        tTr2 =tTr2 +" <li ><a id='0' href='#' onclick='getpage(this)'>&raquo;</a></li>";
+                        tTr2 = tTr2 + " <li ><a id='0' href='#' onclick='getpage(this)'>&raquo;</a></li>";
                         $("#articlebody").append(tTr);
                         $("#page").append(tTr2);
                     } else {

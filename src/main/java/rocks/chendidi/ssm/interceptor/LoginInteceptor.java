@@ -25,7 +25,7 @@ public class LoginInteceptor implements HandlerInterceptor {
         User user = (User) session.getAttribute("u");
         //判断是否为公开地址
         String url = request.getRequestURL().toString();
-        if (url.contains("register")||url.contains("login_check")) {
+        if (url.contains("register")||url.contains("login_check")||url.contains("token")) {
             return true;//是公开地址则放行
         } //判断用户是否登录
         else if (user != null) {

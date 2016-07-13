@@ -129,7 +129,7 @@
                         else
                             $('[id=delete]').attr("disabled", true);
                     } else {
-                        alert("ERROR!!!!!!!!!!!!!!!!!!!!!!!!");
+                        alert("没有回复!!!!!!!!!!!!!!!!!!!!!!!!");
                     }
                 }
             });
