@@ -211,6 +211,12 @@
                 <a href="#" class="list-group-item">
                     <h4 class="list-group-item-heading">${sessionScope.a.username}</h4> <pre
                         class="list-group-item-text">${sessionScope.a.article}</pre>
+                    <c:forEach items="${sessionScope.p}" var="photo">
+                    <div class=" container-fluid">
+                        </br>
+                        <img src="http://o9xpxlz6j.bkt.clouddn.com/${photo.photoid}" class=" img-rounded img-responsive" alt="Cinque Terre">
+                        </div>
+                    </c:forEach>
 
                 </a>
                 <button class="btn btn-small btn-link  pull-right" id="delete"

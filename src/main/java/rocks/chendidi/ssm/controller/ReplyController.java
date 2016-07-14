@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import rocks.chendidi.ssm.model.Page;
 import rocks.chendidi.ssm.pojo.Article;
+import rocks.chendidi.ssm.pojo.Photo;
 import rocks.chendidi.ssm.pojo.Reply;
 import rocks.chendidi.ssm.pojo.User;
 import rocks.chendidi.ssm.service.ArticleService;
@@ -65,10 +66,12 @@ public class ReplyController {
     @RequestMapping(value = "/reply", produces = "text/plain;charset=UTF-8")
     public String page(HttpSession httpSession, Article article) {
         article = articleService.getById(article);
+        List<Photo> photos = articleService.getPhotos(article.getArticleid());
         System.out.println(article.getArticle());
         System.out.println(article.getTitle());
         System.out.println(article.getUsername());
         httpSession.setAttribute("a", article);
+        httpSession.setAttribute("p", photos);
         return "reply";
     }
 

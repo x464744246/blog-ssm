@@ -50,7 +50,7 @@
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>
         <!-- 指定数据库表 -->
-        <table tableName="reply"></table>
+        <table tableName="photo"></table>
        <!-- <table tableName="user"></table>
         <table tableName="article"></table>-->
 

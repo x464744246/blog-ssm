@@ -3,9 +3,12 @@ package rocks.chendidi.ssm.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import rocks.chendidi.ssm.mapper.ArticleMapper;
+import rocks.chendidi.ssm.mapper.PhotoMapper;
 import rocks.chendidi.ssm.model.Page;
 import rocks.chendidi.ssm.pojo.Article;
 import rocks.chendidi.ssm.pojo.ArticleExample;
+import rocks.chendidi.ssm.pojo.Photo;
+import rocks.chendidi.ssm.pojo.PhotoExample;
 import rocks.chendidi.ssm.service.ArticleService;
 import rocks.chendidi.ssm.util.PublicValue;
 
@@ -19,6 +22,9 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Autowired
     private ArticleMapper articleMapper;
+
+    @Autowired
+    private PhotoMapper photoMapper;
 
     public Article getById(Article article) {
 
@@ -60,5 +66,17 @@ public class ArticleServiceImpl implements ArticleService {
 
     public int addArticle(Article article) {
         return articleMapper.insert(article);
+    }
+
+    public int addPhoto(Photo photo) {
+
+        return photoMapper.insert(photo);
+    }
+
+    public List<Photo> getPhotos(String articleid) {
+        PhotoExample photoExample = new PhotoExample();
+        PhotoExample.Criteria criteria = photoExample.createCriteria();
+        criteria.andArticleidEqualTo(articleid);
+        return photoMapper.selectByExample(photoExample);
     }
 }

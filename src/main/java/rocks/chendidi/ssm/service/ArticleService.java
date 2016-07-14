@@ -2,6 +2,7 @@ package rocks.chendidi.ssm.service;
 
 import rocks.chendidi.ssm.model.Page;
 import rocks.chendidi.ssm.pojo.Article;
+import rocks.chendidi.ssm.pojo.Photo;
 
 import java.util.List;
 
@@ -19,5 +20,9 @@ public interface ArticleService {
     int deleteArticle(Article article);
 
     int addArticle(Article article);
+
+    int addPhoto(Photo photo);
+
+    List<Photo> getPhotos(String articleid);
 
 }

@@ -40,8 +40,28 @@ import java.io.IOException;
 @Configuration
 @ComponentScan("rocks.chendidi.ssm.service")
 public class ArticleController {
+    //设置好账号的ACCESS_KEY和SECRET_KEY
+    String ACCESS_KEY = "Z8wombdh9buqzFIPyiEcfws79BOyQurVDpbltkJg";
+    String SECRET_KEY = "HokbRUvvDkBxxA08yMqJcwX6RHsQXQ0TPIEFtVit";
+    //要上传的空间
+    String bucketname = "blog";
+    //上传到七牛后保存的文件名
+    //  String key = "my-java.png";
+    //上传文件的路径
+    String FilePath = "D:\\photo\\photo.jpg";
+
+    //密钥配置
+    Auth auth = Auth.create(ACCESS_KEY, SECRET_KEY);
+    //创建上传对象
+    UploadManager uploadManager = new UploadManager();
+    //简单上传，使用默认策略，只需要设置上传的空间名就可以了
+
     @Autowired
     ArticleService articleService;
+
+    public String getUpToken(){
+        return this.auth.uploadToken(bucketname);
+    }
 
     @RequestMapping(value = "/page", produces = "text/plain;charset=UTF-8")
     public String page(HttpServletResponse response, int page) throws IOException {
@@ -74,7 +94,9 @@ public class ArticleController {
         return "article";
     }
     @RequestMapping(value = "/edit", produces = "text/plain;charset=UTF-8")
-    public String edit() {
+    public String edit(HttpSession httpSession) {
+        UUID uuid = UUID.randomUUID();
+        httpSession.setAttribute("uuid",uuid);
         return "edit";
     }
 
@@ -104,6 +126,8 @@ public class ArticleController {
 
     @RequestMapping(value = "/add", produces = "text/plain;charset=UTF-8")
     public String add(HttpSession httpSession, HttpServletResponse response,Article article) throws IOException {
+        String articleid = httpSession.getAttribute("uuid").toString();
+        article.setArticleid(articleid);
         article.setTitle(java.net.URLDecoder.decode(article.getTitle(), "utf-8"));
         article.setArticle(java.net.URLDecoder.decode(article.getArticle(),"utf-8"));
         System.out.println(article.getArticle()+"          " +article.getTitle());
@@ -130,29 +154,13 @@ public class ArticleController {
         response.getWriter().close();
         return null;
     }
-    //设置好账号的ACCESS_KEY和SECRET_KEY
-    String ACCESS_KEY = "Z8wombdh9buqzFIPyiEcfws79BOyQurVDpbltkJg";
-    String SECRET_KEY = "HokbRUvvDkBxxA08yMqJcwX6RHsQXQ0TPIEFtVit";
-    //要上传的空间
-    String bucketname = "blog";
-    //上传到七牛后保存的文件名
-  //  String key = "my-java.png";
-    //上传文件的路径
-    String FilePath = "D:\\photo\\photo.jpg";
 
-    //密钥配置
-    Auth auth = Auth.create(ACCESS_KEY, SECRET_KEY);
-    //创建上传对象
-    UploadManager uploadManager = new UploadManager();
-    //简单上传，使用默认策略，只需要设置上传的空间名就可以了
-    public String getUpToken(){
-        return this.auth.uploadToken(bucketname);
-    }
 
-    @RequestMapping(value = "/photot",  method = RequestMethod.POST)
+    @RequestMapping(value = "/photo",  method = RequestMethod.POST)
     @ResponseBody
-    public Message photot(MultipartFile file) throws IOException {
+    public Message photot(HttpSession httpSession,MultipartFile file) throws IOException {
 
+        String articleid = httpSession.getAttribute("uuid").toString();
 
         if (!file.isEmpty()) {
             InputStream in = null;
@@ -169,6 +177,11 @@ public class ArticleController {
             in.close();
             SimpleDateFormat df = new SimpleDateFormat("yyyyMMddHHmmss");//设置日期格式
             String key = df.format(new Date()).toString();
+            Photo photo = new Photo();
+            photo.setArticleid(articleid);
+            photo.setPhotoid(key);
+            articleService.addPhoto(photo);
+            System.out.println(articleid);
             System.out.println(key);
             try {
                 //调用put方法上传
@@ -197,6 +210,72 @@ public class ArticleController {
             msg.setError("File upload fail");
             return msg;
         }
+    }
+
+    @RequestMapping(value = "/photos",  method = RequestMethod.POST)
+    @ResponseBody
+    public Message photots(@RequestParam("files") MultipartFile file,HttpSession httpSession) throws IOException {
+
+       // SimpleDateFormat df = new SimpleDateFormat("yyyyMMddHHmmss");//设置日期格式
+        String key = UUID.randomUUID().toString();
+        String articleid = httpSession.getAttribute("uuid").toString();
+        System.out.println("filesize:"+file.getOriginalFilename());
+        //上传文件的路径
+        String FilePath = "D:\\photo\\"+file.getOriginalFilename();
+      //  for(int i =0 ; i<files.size();i++) {
+
+            if (!file.isEmpty()) {
+                InputStream in = null;
+                OutputStream out = null;
+                File serverFile = new File(FilePath);
+                in = file.getInputStream();
+                out = new FileOutputStream(serverFile);
+                byte[] b = new byte[1024];
+                int len = 0;
+                while ((len = in.read(b)) > 0) {
+                    out.write(b, 0, len);
+                }
+                out.close();
+                in.close();
+
+
+                Photo photo = new Photo();
+                photo.setArticleid(articleid);
+                photo.setPhotoid(key);
+
+                System.out.println(key);
+                articleService.addPhoto(photo);
+
+                try {
+                    //调用put方法上传
+                    Response res = uploadManager.put(FilePath, key, getUpToken());
+                    //打印返回的信息
+                    System.out.println(res.bodyString());
+                } catch (QiniuException e) {
+                    Response r = e.response;
+                    // 请求失败时打印的异常的信息
+                    System.out.println(r.toString());
+                    try {
+                        //响应的文本信息
+                        System.out.println(r.bodyString());
+                    } catch (QiniuException e1) {
+                        //ignore
+                    }
+                }
+                Message msg = new Message();
+                msg.setStatus(Status.SUCCESS);
+                msg.setStatusMsg("File upload success");
+                serverFile.delete();
+                return msg;
+            } else {
+
+                Message msg = new Message();
+                msg.setStatus(Status.ERROR);
+                msg.setError("File upload fail");
+                return msg;
+            }
+       // }
+
     }
 
 }
