@@ -3,12 +3,13 @@ package rocks.chendidi.ssm.pojo;
 /**
  * Created by lenov0 on 2016/7/13.
  */
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by zhangjk on 2016/1/15.
  */
-public class Message {
+public class Message implements Serializable {
     private Status status;
     private String statusMsg = "";
     private ArrayList<Integer> errorKys;

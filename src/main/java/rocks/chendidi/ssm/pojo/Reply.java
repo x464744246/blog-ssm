@@ -1,8 +1,9 @@
 package rocks.chendidi.ssm.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Reply {
+public class Reply implements Serializable {
     private String replyid;
 
     private String reply;

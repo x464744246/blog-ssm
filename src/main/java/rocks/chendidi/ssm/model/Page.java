@@ -2,12 +2,13 @@ package rocks.chendidi.ssm.model;
 
 import rocks.chendidi.ssm.util.PublicValue;
 
+import java.io.Serializable;
 import java.util.*;
 
 /**
  * Created by lenov0 on 2016/7/8.
  */
-public class Page {
+public class Page implements Serializable {
     private int totlePage;
     private int current;
     private int totleRows;

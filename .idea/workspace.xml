@@ -5,43 +5,100 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c47581c-2ece-45e2-bc91-bc5ae01de47b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/change_fail.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/change_success.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/download.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/message_title.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/my_message.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/my_reply.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/th.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/widget.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/change_fail.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/change_success.jsp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/controller/RegisterController.class" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/controller/RegisterController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/controller/ReplyController.class" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/controller/ReplyController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/controller/TokenController.class" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/controller/TokenController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/controller/UserController.class" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/controller/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/service/UserService.class" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/service/impl/UserServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/controller/RegisterController.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/controller/RegisterController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/controller/ReplyController.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/controller/ReplyController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/controller/TokenController.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/controller/TokenController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/controller/UserController.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/controller/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/service/UserService.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/service/impl/UserServiceImpl.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/download.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/message_title.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/my_message.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/my_reply.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/th.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ssm/widget.jsp" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/model/Page.class" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/model/Page.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/Article.class" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/Article.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/ArticleExample$Criteria.class" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/ArticleExample$Criteria.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/ArticleExample$Criterion.class" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/ArticleExample$Criterion.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/ArticleExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/ArticleExample$GeneratedCriteria.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/ArticleExample.class" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/ArticleExample.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/Message.class" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/Message.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/Photo.class" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/Photo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/PhotoExample$Criteria.class" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/PhotoExample$Criteria.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/PhotoExample$Criterion.class" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/PhotoExample$Criterion.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/PhotoExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/PhotoExample$GeneratedCriteria.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/PhotoExample.class" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/PhotoExample.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/Reply.class" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/Reply.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/ReplyExample$Criteria.class" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/ReplyExample$Criteria.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/ReplyExample$Criterion.class" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/ReplyExample$Criterion.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/ReplyExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/ReplyExample$GeneratedCriteria.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/ReplyExample.class" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/ReplyExample.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/Status.class" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/Status.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/User.class" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/UserExample$Criteria.class" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/UserExample$Criteria.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/UserExample$Criterion.class" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/UserExample$Criterion.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/UserExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/UserExample$GeneratedCriteria.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/UserExample.class" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/pojo/UserExample.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/model/Page.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/model/Page.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/Article.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/Article.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/ArticleExample$Criteria.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/ArticleExample$Criteria.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/ArticleExample$Criterion.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/ArticleExample$Criterion.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/ArticleExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/ArticleExample$GeneratedCriteria.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/ArticleExample.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/ArticleExample.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/Message.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/Message.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/Photo.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/Photo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/PhotoExample$Criteria.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/PhotoExample$Criteria.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/PhotoExample$Criterion.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/PhotoExample$Criterion.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/PhotoExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/PhotoExample$GeneratedCriteria.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/PhotoExample.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/PhotoExample.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/Reply.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/Reply.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/ReplyExample$Criteria.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/ReplyExample$Criteria.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/ReplyExample$Criterion.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/ReplyExample$Criterion.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/ReplyExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/ReplyExample$GeneratedCriteria.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/ReplyExample.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/ReplyExample.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/Status.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/Status.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/User.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/UserExample$Criteria.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/UserExample$Criteria.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/UserExample$Criterion.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/UserExample$Criterion.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/UserExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/UserExample$GeneratedCriteria.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/UserExample.class" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/pojo/UserExample.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/ssm_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/ssm_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/controller/RegisterController.java" afterPath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/controller/RegisterController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/controller/ReplyController.java" afterPath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/controller/ReplyController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/controller/TokenController.java" afterPath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/controller/TokenController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/service/impl/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/article.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/article.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/edit.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/edit.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/password.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/password.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/regist_fail.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/regist_fail.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/regist_success.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/regist_success.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/reply.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/reply.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/model/Page.java" afterPath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/model/Page.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/Article.java" afterPath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/Article.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/ArticleExample.java" afterPath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/ArticleExample.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/Message.java" afterPath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/Message.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/Photo.java" afterPath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/Photo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/PhotoExample.java" afterPath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/PhotoExample.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/Reply.java" afterPath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/Reply.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/ReplyExample.java" afterPath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/ReplyExample.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/Status.java" afterPath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/Status.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/User.java" afterPath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/UserExample.java" afterPath="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/UserExample.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config/mybatis/SqlMapConfig.xml" afterPath="$PROJECT_DIR$/src/main/resources/config/mybatis/SqlMapConfig.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config/spring/applicationContext-dao.xml" afterPath="$PROJECT_DIR$/src/main/resources/config/spring/applicationContext-dao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config/spring/applicationContext-transaction.xml" afterPath="$PROJECT_DIR$/src/main/resources/config/spring/applicationContext-transaction.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/rocks/chendidi/ssm/mapper/ArticleMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/rocks/chendidi/ssm/mapper/ArticleMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/rocks/chendidi/ssm/mapper/PhotoMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/rocks/chendidi/ssm/mapper/PhotoMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/rocks/chendidi/ssm/mapper/ReplyMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/rocks/chendidi/ssm/mapper/ReplyMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/rocks/chendidi/ssm/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/rocks/chendidi/ssm/mapper/UserMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ssm.iml" afterPath="$PROJECT_DIR$/ssm.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config/mybatis/SqlMapConfig.xml" afterPath="$PROJECT_DIR$/target/classes/config/mybatis/SqlMapConfig.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config/spring/applicationContext-dao.xml" afterPath="$PROJECT_DIR$/target/classes/config/spring/applicationContext-dao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config/spring/applicationContext-transaction.xml" afterPath="$PROJECT_DIR$/target/classes/config/spring/applicationContext-transaction.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/mapper/ArticleMapper.xml" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/mapper/ArticleMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/mapper/PhotoMapper.xml" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/mapper/PhotoMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/mapper/ReplyMapper.xml" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/mapper/ReplyMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/target/classes/rocks/chendidi/ssm/mapper/UserMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/config/mybatis/SqlMapConfig.xml" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/config/mybatis/SqlMapConfig.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/config/spring/applicationContext-dao.xml" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/config/spring/applicationContext-dao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/config/spring/applicationContext-transaction.xml" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/config/spring/applicationContext-transaction.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/mapper/ArticleMapper.xml" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/mapper/ArticleMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/mapper/PhotoMapper.xml" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/mapper/PhotoMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/mapper/ReplyMapper.xml" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/mapper/ReplyMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/target/ssm/WEB-INF/classes/rocks/chendidi/ssm/mapper/UserMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/article.jsp" afterPath="$PROJECT_DIR$/target/ssm/article.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/edit.jsp" afterPath="$PROJECT_DIR$/target/ssm/edit.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/password.jsp" afterPath="$PROJECT_DIR$/target/ssm/password.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/regist_fail.jsp" afterPath="$PROJECT_DIR$/target/ssm/regist_fail.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/regist_success.jsp" afterPath="$PROJECT_DIR$/target/ssm/regist_success.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ssm/reply.jsp" afterPath="$PROJECT_DIR$/target/ssm/reply.jsp" />
     </list>
     <ignored path="ssm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,7 +121,123 @@
     <favorites_list name="ssm" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="Article.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/Article.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Page.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/model/Page.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArticleMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/mapper/ArticleMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArticleServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/service/impl/ArticleServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="551">
+              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArticleMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/rocks/chendidi/ssm/mapper/ArticleMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+              <folding>
+                <marker date="1468635141368" expanded="true" signature="3814:3931" ph="select from article" />
+                <marker date="1468635141368" expanded="true" signature="4017:4088" ph="delete from " />
+                <marker date="1468635141368" expanded="true" signature="4193:4212" ph="delete from " />
+                <marker date="1468635141368" expanded="true" signature="4542:4884" ph="insert into article... " />
+                <marker date="1468635141368" expanded="true" signature="6339:6367" ph="select count... article" />
+                <marker date="1468635141368" expanded="true" signature="7526:7921" ph="update artic... " />
+                <marker date="1468635141368" expanded="true" signature="8134:8802" ph="update artic... " />
+                <marker date="1468635141368" expanded="true" signature="8903:9252" ph="update artic... " />
+                <marker date="1468635141368" expanded="true" signature="9380:9485" ph="select from article" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MybatisRedisCache.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/util/MybatisRedisCache.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="722">
+              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1468634526140" expanded="true" signature="1896:1897" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SerializeUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/util/SerializeUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="537">
+              <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="234" column="20" selection-start-line="234" selection-start-column="20" selection-end-line="234" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log4j.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArticleController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/controller/ArticleController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="166">
+              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -87,28 +260,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/test/rocks/chendidi/ssm/util/MD5UtilTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/test/rocks/chendidi/ssm/service/impl/UserServiceImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/controller/Register.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/mapper/UserMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/rocks/chendidi/ssm/mapper/UserMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/test/rocks/chendidi/ssm/service/impl/RegisterServiceImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/service/impl/RegisterServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/mapper/ArticleMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/test/rocks/chendidi/ssm/mapper/UserMapperTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/service/RegisterService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/test/rocks/chendidi/ssm/service/impl/ArticleServiceImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/util/PublicValue.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/my_reply.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/message_reply.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/mapper/ReplyMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/test/rocks/chendidi/ssm/service/impl/ReplyServiceImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/test/rocks/chendidi/ssm/mapper/ReplyMapperTest.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/rocks/chendidi/ssm/mapper/ReplyMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/model/Page.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/service/ReplyService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/service/impl/ReplyServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/test/rocks/chendidi/ssm/mapper/ArticleMapperTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/controller/TestController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/file/test.js" />
@@ -116,12 +267,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/regist.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/test.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/config/spring/springmvc.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/Message.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/Status.java" />
         <option value="$PROJECT_DIR$/target/ssm/article.jsp" />
         <option value="$PROJECT_DIR$/target/ssm/regist.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/rocks/chendidi/ssm/mapper/ArticleMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
         <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/service/ArticleService.java" />
         <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/service/impl/ArticleServiceImpl.java" />
@@ -138,6 +285,32 @@
         <option value="$PROJECT_DIR$/src/main/webapp/reply.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/regist_fail.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/regist_success.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/config/spring/applicationContext-transaction.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/util/LoggingRedisCache.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/config/redis.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/util/RedisUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/config/mybatis/SqlMapConfig.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/util/MybatisRedisCache.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/rocks/chendidi/ssm/mapper/ArticleMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/rocks/chendidi/ssm/mapper/PhotoMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/rocks/chendidi/ssm/mapper/ReplyMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/config/spring/applicationContext-dao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/model/Page.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/UserExample.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/Article.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/ArticleExample.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/Message.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/Photo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/PhotoExample.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/Reply.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/ReplyExample.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/Status.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/rocks/chendidi/ssm/mapper/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/mapper/ArticleMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/util/SerializeUtil.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
       </list>
     </option>
   </component>
@@ -172,8 +345,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1456" />
-    <option name="height" value="876" />
+    <option name="width" value="1296" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -225,9 +398,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane />
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -299,6 +469,92 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ssm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ssm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ssm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ssm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ssm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ssm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spring" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -347,6 +603,10 @@
               <option name="myItemId" value="ssm" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -374,14 +634,133 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ssm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ssm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ssm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pojo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ssm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ssm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ssm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ssm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ssm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ssm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ssm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ssm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ssm" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -394,22 +773,24 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="SearchEverywhereHistoryKey" value="selectByPrimaryKey&#9;PSI&#9;JAVA://rocks.chendidi.ssm.mapper.UserMapper#selectByPrimaryKey" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/ssm-master" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="rocks.chendidi.ssm" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\study\ReadyFoJavaee\ssm\src\main\webapp\file" />
-      <recent name="D:\study\ReadyFoJavaee\ssm\src\main\java\rocks\chendidi\ssm" />
-      <recent name="D:\study\ReadyFoJavaee\ssm\src\main\webapp" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\study\ReadyFoJavaee\ssm\src\main\webapp\file" />
       <recent name="D:\study\ReadyFoJavaee\ssm\src\main\webapp" />
       <recent name="D:\study\ReadyFoJavaee\ssm\src\main\webapp\jsp" />
       <recent name="D:\study\ReadyFoJavaee\ssm\src\main\webapp\WEB-INF" />
       <recent name="D:\study\ReadyFoJavaee\ssm\src\main\resources\config\mybatis" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="rocks.chendidi.ssm" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\study\ReadyFoJavaee\ssm\src\main\resources" />
+      <recent name="D:\study\ReadyFoJavaee\ssm\src\main\webapp\file" />
+      <recent name="D:\study\ReadyFoJavaee\ssm\src\main\java\rocks\chendidi\ssm" />
+      <recent name="D:\study\ReadyFoJavaee\ssm\src\main\webapp" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Unnamed">
@@ -1120,6 +1501,7 @@
       <workItem from="1468493591509" duration="3565000" />
       <workItem from="1468543509135" duration="8835000" />
       <workItem from="1468595500719" duration="640000" />
+      <workItem from="1468628401522" duration="6453000" />
     </task>
     <servers />
   </component>
@@ -1156,7 +1538,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168451000" />
+    <option name="totallyTimeSpent" value="174904000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1168,11 +1550,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1296" height="1000" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25605536" sideWeight="0.48220065" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298731" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1180,25 +1563,24 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298731" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22653721" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39100346" sideWeight="0.6278317" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298731" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26862463" sideWeight="0.49380532" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26860842" sideWeight="0.49380532" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3030086" sideWeight="0.5061947" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39907727" sideWeight="0.49676377" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39907727" sideWeight="0.49676377" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25706595" sideWeight="0.48220065" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22611037" sideWeight="0.6278317" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1222,211 +1604,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/test/rocks/chendidi/ssm/service/impl/RegisterServiceImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/my_reply.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/Reply.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-305">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/Article.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/mapper/ArticleMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="30" column="50" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/ReplyExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2546">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test/rocks/chendidi/ssm/service/impl/ReplyServiceImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test/rocks/chendidi/ssm/service/impl/ArticleServiceImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test/rocks/chendidi/ssm/mapper/ReplyMapperTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="60" column="34" selection-start-line="57" selection-start-column="7" selection-end-line="60" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/model/Page.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/service/ReplyService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/service/impl/ReplyServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="56" column="41" selection-start-line="55" selection-start-column="36" selection-end-line="56" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/rocks/chendidi/ssm/mapper/ReplyMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="104" column="4" selection-start-line="104" selection-start-column="4" selection-end-line="106" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/widget.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/change_fail.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/util/MD5Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/file/to/js/locales/ar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="28" column="74" selection-start-line="28" selection-start-column="74" selection-end-line="28" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/file/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3857">
-          <caret line="203" column="3" selection-start-line="203" selection-start-column="3" selection-end-line="203" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/service/impl/RegisterServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/interceptor/LoginInteceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="27" column="81" selection-start-line="27" selection-start-column="81" selection-end-line="27" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config/spring/springmvc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="228" column="40" selection-start-line="228" selection-start-column="40" selection-end-line="228" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/Status.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/ssm/regist.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="135" column="31" selection-start-line="135" selection-start-column="31" selection-end-line="135" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/controller/TestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/test.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="73" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/ssm/article.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="169" column="12" selection-start-line="169" selection-start-column="12" selection-end-line="169" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/generatorConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="52" column="31" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/rocks/chendidi/ssm/mapper/ArticleMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="649">
-          <caret line="78" column="40" selection-start-line="78" selection-start-column="40" selection-end-line="78" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/test/rocks/chendidi/ssm/mapper/ArticleMapperTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
@@ -1438,13 +1615,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/service/impl/ArticleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1470,19 +1640,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="41" column="49" selection-start-line="41" selection-start-column="49" selection-end-line="41" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/controller/TokenController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="741">
           <caret line="50" column="22" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1492,24 +1655,6 @@
         <state relative-caret-position="361">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="121" column="68" selection-start-line="121" selection-start-column="68" selection-end-line="121" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/controller/ArticleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="103" column="50" selection-start-line="103" selection-start-column="50" selection-end-line="103" selection-end-column="79" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3743#3759#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1581,6 +1726,328 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
           <caret line="93" column="20" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/util/LoggingRedisCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config/redis.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config/spring/springmvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config/mybatis/SqlMapConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config/spring/applicationContext-transaction.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="54" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config/spring/applicationContext-service.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/util/RedisUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="80" column="1" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config/spring/applicationContext-dao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="26" column="90" selection-start-line="26" selection-start-column="90" selection-end-line="26" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/ArticleExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/Photo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#618#619#0" expanded="false" />
+            <element signature="e#660#661#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/PhotoExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/Reply.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/ReplyExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/Status.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/rocks/chendidi/ssm/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="61" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="61" />
+          <folding>
+            <marker date="1468635459429" expanded="true" signature="3720:3828" ph="select from user" />
+            <marker date="1468635459429" expanded="true" signature="3914:3976" ph="delete from " />
+            <marker date="1468635459429" expanded="true" signature="4078:4094" ph="delete from " />
+            <marker date="1468635459429" expanded="true" signature="4273:4572" ph="insert into user... " />
+            <marker date="1468635459429" expanded="true" signature="5866:5891" ph="select count... user" />
+            <marker date="1468635459429" expanded="true" signature="6936:7274" ph="update user " />
+            <marker date="1468635459429" expanded="true" signature="7484:8055" ph="update user " />
+            <marker date="1468635459429" expanded="true" signature="8153:8452" ph="update user " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/rocks/chendidi/ssm/mapper/ReplyMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="61" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="61" />
+          <folding>
+            <marker date="1468635141393" expanded="true" signature="3806:3917" ph="select from reply" />
+            <marker date="1468635141393" expanded="true" signature="4003:4068" ph="delete from " />
+            <marker date="1468635141393" expanded="true" signature="4171:4188" ph="delete from " />
+            <marker date="1468635141393" expanded="true" signature="6295:6321" ph="select count... reply" />
+            <marker date="1468635141393" expanded="true" signature="7478:7871" ph="update reply... " />
+            <marker date="1468635141393" expanded="true" signature="8082:8750" ph="update reply... " />
+            <marker date="1468635141393" expanded="true" signature="8849:9196" ph="update reply... " />
+            <marker date="1468635141393" expanded="true" signature="9289:9415" ph="select from reply" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/rocks/chendidi/ssm/mapper/PhotoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="61" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="61" />
+          <folding>
+            <marker date="1468635141342" expanded="true" signature="3395:3506" ph="select from photo" />
+            <marker date="1468635141342" expanded="true" signature="3592:3657" ph="delete from " />
+            <marker date="1468635141342" expanded="true" signature="3760:3777" ph="delete from " />
+            <marker date="1468635141342" expanded="true" signature="3957:4067" ph="insert into photo... " />
+            <marker date="1468635141342" expanded="true" signature="4756:4782" ph="select count... photo" />
+            <marker date="1468635141342" expanded="true" signature="5383:5504" ph="update photo... " />
+            <marker date="1468635141342" expanded="true" signature="5715:5897" ph="update photo... " />
+            <marker date="1468635141342" expanded="true" signature="5996:6106" ph="update photo... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/UserExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/util/MD5Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/pojo/Article.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/model/Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/mapper/ArticleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/controller/ArticleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/rocks/chendidi/ssm/mapper/ArticleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+          <folding>
+            <marker date="1468635141368" expanded="true" signature="3814:3931" ph="select from article" />
+            <marker date="1468635141368" expanded="true" signature="4017:4088" ph="delete from " />
+            <marker date="1468635141368" expanded="true" signature="4193:4212" ph="delete from " />
+            <marker date="1468635141368" expanded="true" signature="4542:4884" ph="insert into article... " />
+            <marker date="1468635141368" expanded="true" signature="6339:6367" ph="select count... article" />
+            <marker date="1468635141368" expanded="true" signature="7526:7921" ph="update artic... " />
+            <marker date="1468635141368" expanded="true" signature="8134:8802" ph="update artic... " />
+            <marker date="1468635141368" expanded="true" signature="8903:9252" ph="update artic... " />
+            <marker date="1468635141368" expanded="true" signature="9380:9485" ph="select from article" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.3.0/mybatis-3.3.0.jar!/org/apache/ibatis/cache/decorators/LoggingCache.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/service/impl/ArticleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/util/MybatisRedisCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1468634526140" expanded="true" signature="1896:1897" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rocks/chendidi/ssm/util/SerializeUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="234" column="20" selection-start-line="234" selection-start-column="20" selection-end-line="234" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>

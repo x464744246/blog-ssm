@@ -1,6 +1,8 @@
 package rocks.chendidi.ssm.pojo;
 
-public class Photo {
+import java.io.Serializable;
+
+public class Photo implements Serializable {
     private String photoid;
 
     private String articleid;

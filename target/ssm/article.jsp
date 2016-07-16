@@ -104,7 +104,7 @@
     </div>
     <div class="collapse navbar-collapse" id="example-navbar-collapse">
         <ul class="nav navbar-nav">
-            <li class="active"><a href="./Message_PageAction.action?page=1">首页</a></li>
+            <li class="active"><a href="http://localhost:8080/article/article">首页</a></li>
             <li><a href="http://localhost:8080/article/edit">添加文章</a></li>
             <li><a href="./MAndRAction.action?page=1">我的回复</a></li>
             <li class="dropdown"><a href="#" class="dropdown-toggle"

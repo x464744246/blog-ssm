@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="rocks.chendidi.ssm.mapper.ArticleMapper" >
+  <cache  type="rocks.chendidi.ssm.util.MybatisRedisCache" />
   <resultMap id="BaseResultMap" type="rocks.chendidi.ssm.pojo.Article" >
     <id column="Articleid" property="articleid" jdbcType="VARCHAR" />
     <result column="Article" property="article" jdbcType="VARCHAR" />
