@@ -18,4 +18,6 @@ public  interface UserService {
     List<User> queryUsers()throws Exception;
 
     User findUser(User user) throws Exception ;
+
+    int changePasswor(User user)throws Exception;
 }

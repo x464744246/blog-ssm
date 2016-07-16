@@ -37,4 +37,8 @@ public class UserServiceImpl implements UserService {
         else
             return null;
     }
+
+    public int changePasswor(User user) throws Exception {
+        return userMapper.updateByPrimaryKey(user);
+    }
 }

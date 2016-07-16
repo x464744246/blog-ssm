@@ -44,10 +44,10 @@ pageEncoding="utf-8"%>
 	<div class="am-g">
 		<div class="am-u-lg-6 am-u-md-8 am-u-sm-centered">
 
-			<form name="regist" action="Login_ReturnAction.action" method="post" class="am-form" ">
+			<form name="regist" action="" method="post" class="am-form" ">
 				
 				<div class="am-cf ">
-					<input type="submit" name="" value="返回登陆" class="am-btn am-btn-primary am-btn-sm am-fl am-u-sm-centered">
+					<input type="button" name="" value="返回登陆" onClick="location='http://localhost:8080/user/login' "class="am-btn am-btn-primary am-btn-sm am-fl am-u-sm-centered">
 				</div>
 			</form>
 			<hr>

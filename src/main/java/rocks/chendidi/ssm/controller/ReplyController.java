@@ -36,13 +36,13 @@ public class ReplyController {
     @Autowired
     ReplyService replyService;
 
-
+    /*分页返回页面信息*/
     @RequestMapping(value = "/page", produces = "text/plain;charset=UTF-8")
     public String page(HttpSession httpSession, HttpServletResponse response, int page) throws IOException {
         System.out.println(page);
         Article article = (Article) httpSession.getAttribute("a");
         List<Reply> list = replyService.getByPage(page, PublicValue.PAGESIZE, article.getArticleid());
-        Page p = replyService.getPage(page,article.getArticleid());
+        Page p = replyService.getPage(page, article.getArticleid());
 //        System.out.println(list.get(0).getArticleid());
         boolean flag = false;
         if (list.size() > 0) {
@@ -63,6 +63,7 @@ public class ReplyController {
         return null;
     }
 
+    /*回复页面跳转*/
     @RequestMapping(value = "/reply", produces = "text/plain;charset=UTF-8")
     public String page(HttpSession httpSession, Article article) {
         article = articleService.getById(article);
@@ -75,9 +76,9 @@ public class ReplyController {
         return "reply";
     }
 
-
+    /*添加回复*/
     @RequestMapping(value = "/add", produces = "text/plain;charset=UTF-8")
-    public String add(HttpSession httpSession, HttpServletResponse response,Reply reply) throws IOException {
+    public String add(HttpSession httpSession, HttpServletResponse response, Reply reply) throws IOException {
         User user = (User) httpSession.getAttribute("u");
         Article article = (Article) httpSession.getAttribute("a");
         reply.setArticleid(article.getArticleid());
@@ -104,8 +105,9 @@ public class ReplyController {
         return null;
     }
 
+    /*删除回复*/
     @RequestMapping(value = "/delete", produces = "text/plain;charset=UTF-8")
-    public String delete(HttpSession httpSession, HttpServletResponse response,Reply reply) throws IOException {
+    public String delete(HttpSession httpSession, HttpServletResponse response, Reply reply) throws IOException {
 
         int row = replyService.deleteReply(reply);
 

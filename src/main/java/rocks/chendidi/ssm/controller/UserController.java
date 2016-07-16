@@ -1,5 +1,6 @@
 package rocks.chendidi.ssm.controller;
 
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -10,8 +11,11 @@ import rocks.chendidi.ssm.pojo.User;
 import rocks.chendidi.ssm.service.UserService;
 import rocks.chendidi.ssm.util.MD5Util;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by lenov0 on 2016/7/6.
@@ -62,6 +66,7 @@ public class UserController {
         return "login";
     }
 
+    /*  注销跳转登录页面 */
     @RequestMapping(value = "/login_out", produces = "text/plain;charset=UTF-8")
     public String loginout(HttpSession httpSession) throws Exception {
         httpSession.setAttribute("u",null);
@@ -91,6 +96,56 @@ public class UserController {
 
     }
 
+    @RequestMapping(value = "/password", produces = "text/plain;charset=UTF-8")
+    public String password(HttpSession httpSession, User u) throws Exception {
+
+            return "password";
+
+
+    }
+
+    @RequestMapping(value = "/password_change", produces = "text/plain;charset=UTF-8")
+    public String passwordChange(HttpServletResponse response, HttpSession httpSession, String password1, String password2) throws Exception {
+        User user = ((User)httpSession.getAttribute("u"));
+        if(MD5Util.string2MD5(password1).equals(user.getPassword())){
+            user.setPassword(MD5Util.string2MD5(password2));
+
+            int row = userService.changePasswor(user);
+
+            System.out.println("row:"+row);
+            boolean flag = false;
+            if (row > 0) {
+                flag = true;
+                httpSession.setAttribute("u",null);
+            }
+            //将数据转换成json
+            Map<String, Object> map = new HashMap<String, Object>();
+            map.put("flag", flag);
+            String json = JSONObject.valueToString(map).toString();
+            //将数据返回
+            response.setCharacterEncoding("UTF-8");
+            response.flushBuffer();
+            response.getWriter().write(json);
+            response.getWriter().flush();
+            response.getWriter().close();
+            return null;
+        }else{
+            boolean flag = false;
+            //将数据转换成json
+            Map<String, Object> map = new HashMap<String, Object>();
+            map.put("flag", flag);
+            String json = JSONObject.valueToString(map).toString();
+            //将数据返回
+            response.setCharacterEncoding("UTF-8");
+            response.flushBuffer();
+            response.getWriter().write(json);
+            response.getWriter().flush();
+            response.getWriter().close();
+            return null;
+
+        }
+
+    }
 
  /*   @RequestMapping("/jsontest")
     @ResponseBody

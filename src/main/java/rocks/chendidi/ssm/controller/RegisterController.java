@@ -32,11 +32,13 @@ public class RegisterController {
 
     int num = 0;
 
+    /*注册页面跳转*/
     @RequestMapping(value = "/register", produces = "text/plain;charset=UTF-8")
     public String register() {
         return "regist";
     }
 
+   /* 动态校验账号是否存在 */
     @RequestMapping(value = "/check_id", method = RequestMethod.POST)
     public String checkUserName(HttpServletRequest request, HttpServletResponse response, User u) throws Exception {
         String userid = u.getUserid();

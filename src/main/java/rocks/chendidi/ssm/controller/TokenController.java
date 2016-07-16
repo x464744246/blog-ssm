@@ -22,6 +22,7 @@ import java.util.Map;
 @ComponentScan("rocks.chendidi.ssm.service")
 public class TokenController {
 
+    /*返回七牛提交的token*/
     @RequestMapping(value = "/gettoken", produces = "text/plain;charset=UTF-8")
     public String token(HttpServletResponse response) throws Exception {
         Config.ACCESS_KEY = "Z8wombdh9buqzFIPyiEcfws79BOyQurVDpbltkJg";
@@ -43,6 +44,7 @@ public class TokenController {
         response.getWriter().close();
         return null;
     }
+    /*测试方法*/
     @RequestMapping(value = "/token", produces = "text/plain;charset=UTF-8")
     public String test(HttpServletResponse response) throws Exception {
 

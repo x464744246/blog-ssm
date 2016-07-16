@@ -22,6 +22,7 @@
         }
     </style>
     <script type="text/javascript">
+
         $(document)
                 .ready(
                         function () {
@@ -127,7 +128,7 @@
                                     class="dropdown-toggle " href="#">${sessionScope.u.username}<strong
                     class="caret"></strong></a>
                 <ul class="dropdown-menu pull-right">
-                    <li><a href="./PasswordChange.action">更改密码</a></li>
+                    <li><a href="http://localhost:8080/user/password">更改密码</a></li>
                     <li class="divider"></li>
                     <li><a href="http://localhost:8080/user/login_out">退出登录</a></li>
                 </ul>
@@ -142,8 +143,9 @@
 
 
     <div class="input-append ">
+
         <input id="keyword" class="span2 " type="text"
-               placeholder="输入 标题,作者id,日期" style="width: 339px; height: 26px">
+               placeholder="输入 标题,作者id,日期" style="width: 339px; height: 26px" oninput = "	associate()">
 
         <div class="btn-group ">
             <button class="btn dropdown-toggle" data-toggle="dropdown">

@@ -20,24 +20,15 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta name="renderer" content="webkit">
 	<meta http-equiv="Cache-Control" content="no-siteapp" />
-	<link rel="alternate icon" type="image/png" href="assets/i/favicon.png">
-	<link rel="stylesheet" href="assets/css/amazeui.min.css" />
-
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/default.css">
-	<link href="css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
-	<script src="http://libs.useso.com/js/jquery/2.1.1/jquery.min.js"></script>
-	<script src="js/fileinput.js" type="text/javascript"></script>
-	<script src="js/fileinput_locale_zh.js" type="text/javascript"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript"></script>
-
-
-
-	<link rel="alternate icon" type="image/png" href="assets/i/favicon.png">
-	<link rel="stylesheet" href="assets/css/amazeui.min.css" />
-	<link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+	<link rel="alternate icon" type="../../../file/image/png" href="assets/i/favicon.png">
+	<link rel="stylesheet" href="../../../file/assets/css/amazeui.min.css"/>
+	<link rel="stylesheet"
+		  href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
 	<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script
+			src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../../file/css/default.css">
 	<style type="text/css">
 		.header {
 			text-align: center;
@@ -102,7 +93,7 @@
 	}
 	function checkpassword3(value) {
 
-		if (document.change.pwd2.value == document.change.pwd3.value) {
+		if (document.change.password2.value == document.change.password3.value) {
 			//格式正确
 			document.getElementById("error3").innerHTML = "";
 		} else {
@@ -116,8 +107,26 @@
 		var error3 = document.getElementById("error3").value;
 		if (error1 == null && error2 == null && error3 == null
 			) {
+			var password1 = $('#password1').val();
+			var password2 = $('#password2').val();
 			alert("校验成功，之后进行提交");
-			return true;
+			$.ajax({ //一个Ajax过程
+				type: "post", //以post方式与后台沟通
+				url: "http://localhost:8080/user/password_change", //与此页面沟通
+				dataType: 'json',//返回的值以 JSON方式 解释
+				data: {"password1": password1,"password2": password2}, //发给的数据
+				success: function (json) {//如果调用成功
+					if (json.flag) {
+						alert("修改成功");
+						self.location = 'http://localhost:8080/user/login';
+						return false;
+					} else {
+						alert("原始密码错误,修改失败");
+						return false;
+					}
+				}
+			});
+
 		} else {
 			alert("填写格式错误");
 			return false;
@@ -140,8 +149,8 @@
 		</div>
 		<div class="collapse navbar-collapse" id="example-navbar-collapse">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="./Message_PageAction.action?page=1">首页</a></li>
-				<li><a href="./Message_AddAction.action">添加文章</a></li>
+				<li class="active"><a href="http://localhost:8080/article/article">首页</a></li>
+				<li><a href="http://localhost:8080/article/edit">添加文章</a></li>
 				<li><a href="./MAndRAction.action?page=1">我的回复</a></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> 更多 <b class="caret"></b>
 			</a>
@@ -159,12 +168,12 @@
 			<!--用户下拉列表-->
 			<ul class="nav pull-right">
 
-				<li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle " href="#">${sessionScope.u.name}<strong
+				<li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle " href="#">${sessionScope.u.username}<strong
 					class="caret"></strong></a>
 					<ul class="dropdown-menu pull-right">
-						<li><a href="./PasswordChange.action">更改密码</a></li>
+						<li><a href="http://localhost:8080/user/password">更改密码</a></li>
 						<li class="divider"></li>
-						<li><a href="./Login_OutAction.action">退出登录</a></li>
+						<li><a href="http://localhost:8080/user/login_out">退出登录</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -182,23 +191,23 @@
 	<div class="am-g">
 		<div class="am-u-lg-6 am-u-md-8 am-u-sm-centered">
 
-			<form name="change" action="PasswordChange_CheckAction.action" method="post" enctype="multipart/form-data" class="am-form" onsubmit="return toVaild()">
+			<form name="change" action="" method="post" enctype="multipart/form-data" class="am-form" >
 				</br>
-				<br> <label for="password">原密码:</label> <input type="password" name="pwd1" id="password1" value="" oninput="OnInput1 (event)"
+				<br> <label>原密码:</label> <input type="password" name="password1" id="password1" value="" oninput="OnInput1 (event)"
 					placeholder="输入旧密码">
 				<p2>
 					<label id="error1" style="color: red"></label></p2>
-				<br> <label for="password">新密码:</label> <input type="password" name="pwd2" id="password2" value="" oninput="OnInput2 (event)"
+				<br> <label >新密码:</label> <input type="password" name="password2" id="password2" value="" oninput="OnInput2 (event)"
 					placeholder="输入新密码">
 				<p2>
 					<label id="error2" style="color: red"></label></p2>
-				<br> <label for="password">重复新密码:</label> <input type="password" name="pwd3" id="password3" value="" oninput="OnInput3 (event)"
+				<br> <label >重复新密码:</label> <input type="password" name="password3" id="password3" value="" oninput="OnInput3 (event)"
 					placeholder="重复新密码">
 				<p2>
 					<label id="error3" style="color: red"></label></p2>
 				<br />
 				<div class="am-cf ">
-					<input type="submit" name="" value="修  改" class="am-btn am-btn-primary am-btn-sm am-fl am-u-sm-centered">
+					<input type="button" name="" onclick="toVaild()" value="修  改" class="am-btn am-btn-primary am-btn-sm am-fl am-u-sm-centered">
 				</div>
 			</form>
 			<hr>
